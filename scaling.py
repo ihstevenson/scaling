@@ -55,7 +55,7 @@ pyplot.title("Doubling Time: %0.01f $\pm$ %0.01f years (n=%i)" % (log(2)/ar,std(
 # Add exponential fit to plot
 pyplot.semilogy(t0,exp(nhat),lw=2)
 pyplot.fill_between(t0,exp(nhat+ci),exp(nhat-ci),alpha=0.25,color=sns.color_palette()[1])
-pyplot.ylim([1, max(n)*1.1])
+pyplot.ylim([1, max(n)*1.2])
 pyplot.xlim([min(t)-1, max(t)+1])
 
 
