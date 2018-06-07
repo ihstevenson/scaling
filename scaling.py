@@ -12,7 +12,7 @@ def log_10_product(x, pos):
     return '%1i' % (x)
 
 # Load data from google spreadsheet
-data = pandas.io.parsers.read_csv("https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0Ai7vcDJIlD6AdF9vQWlNRDh2S1dub09jMWRvTFRpemc&single=true&gid=0&range=A2%3AC1000&output=csv")
+data = pandas.io.parsers.read_csv("https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=0Ai7vcDJIlD6AdF9vQWlNRDh2S1dub09jMWRvTFRpemc&single=true&gid=0&output=csv")
 data = asarray(data);
 data[data[:,1]==0,1]=6.5 # fix missing month values by assuming middle of year
 t = double(data[:,0])+double(data[:,1]-0.5)/12; # assume middle of month
