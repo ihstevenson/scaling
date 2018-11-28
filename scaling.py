@@ -41,6 +41,15 @@ yhat = br+x*ar;
 ci = stats.t.isf(0.05/2,len(x)-2)*sqrt(sum(pow(y-yhat,2))/(len(y)-2))*sqrt(1/len(y)+pow(t0-mean(x),2)/sum(pow(x-mean(x),2)))
 
 
+# restore defaults
+pyplot.rcParams['figure.figsize'] = [8.0, 6.0]
+pyplot.rcParams['figure.dpi'] = 80
+pyplot.rcParams['savefig.dpi'] = 100
+pyplot.rcParams['font.size'] = 12
+pyplot.rcParams['legend.fontsize'] = 'large'
+pyplot.rcParams['figure.titlesize'] = 'medium'
+
+
 sns.set_style("ticks")
 sns.set_palette(sns.color_palette("deep"))
 f = pyplot.figure();
